@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/devopsnikhi/api-app.git'
+                git branch: 'main', url: 'https://github.com/devopsnikhi/api-app.git'
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
 
